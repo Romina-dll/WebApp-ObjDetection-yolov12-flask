@@ -1,0 +1,122 @@
+/*********Complete Page*******/
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+
+/* Main Page */
+.main-page{
+    height:100vh;
+    display:flex;
+
+}
+
+/* Side Line */
+.side-line{
+    background-color: lightslategray;
+    height:100%;
+    width:25px;
+}
+
+/* Side Bar */
+.side-bar{
+    background-color: #f7f7f7;
+    height:100%;
+    width: 15%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-shadow: 1px 1px 10px rgb(185, 185, 185);
+}
+/* Circle */
+.circle{
+    background-color: grey;
+    height:75px;
+    width:75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+
+
+}
+.circle:hover{
+    background-color: yellow;
+}
+
+.circle:active{
+    background-color: green;
+}
+
+.blue-circle{
+    background-color: lightskyblue;
+}
+/* Right Panel */
+.right-panel{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header{
+    background-color: royalblue;
+    height:75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgb(185, 185, 185);
+
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-size: 1.5rem;
+
+}
+.empty-container{
+    padding-left: 70px;
+
+}
+
+.logo-container{
+    padding-right: 70px;
+}
+
+/* Tablet Container */
+.tablet-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Chart Container*/
+.chart-container{
+    width: 50%;
+    height: 150px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 1px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin: 0 auto;
+}
+#tablet-image{
+    position: absolute;
+}
+
+#main-canvas{
+    position: absolute;
+    z-index:-1;
+}

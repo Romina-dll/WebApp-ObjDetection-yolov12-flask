@@ -3,33 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Object Detection using YOLOv12</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        form {
-            margin-bottom: 20px;
-        }
-        video {
-            border: 2px solid #000;
-            width: 640px;
-            height: 480px;
-        }
-    </style>
+    <title>Object Detection</title>
+    <!-- Link to the CSS File -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Add Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Add Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Upload Video for Object Detection</h2>
-    <form action="/" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" required>
-        <button type="submit">Upload</button>
-    </form>
+    <!-- Main Page -->
+    <div class="main-page">
+        <!-- Side Line -->
+        <div class="side-line"></div>
+        <!-- Side Bar -->
+        <div class="side-bar">
+            <label for="fileInput" class="circle" style="cursor: pointer;">
+                <i class="material-icons" style="font-size: 36px; color: white;">cloud_upload</i>
+            </label>
+            <input type="file" name="file" id="fileInput" style="display: none;">
+            <span class="circle" id="button-gray-scale"><i class="material-icons" style="font-size: 36px; color: white;">contrast</i></span>
+            <span class="circle" id="button-blur"><i class="material-icons" style="font-size: 36px; color: white;">blur_on</i></span>
+            <span class="circle" id="button-canny-image"><i class="material-icons" style="font-size: 36px; color: white;">grade</i></span>
+            <span class="circle blue-circle"><i class="material-icons" style="font-size: 36px; color: white;">videocam</i></span>
+        </div>
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <!-- Header -->
+            <div class="header">
+                <div class="empty-container"></div>
+                <h1>Object Detection</h1>
+                <div class="logo-container"><img src="{{ url_for('static', filename='images/logo.png') }}" width="90" height="30" alt=""></div>
+            </div>
+            <!-- Tablet Container -->
+            <div class="tablet-container">
+                <img id="tablet-image" src="{{ url_for('static', filename='images/tablet.png') }}" width="580" height="450" alt="">
+                <canvas id="main-canvas" width="740" height="540"></canvas>
+            </div>
+            <!-- Chart Section-->
+            <div class="chart-container">
+                <canvas id="line-chart"></canvas>
+            </div>
+        </div>
+    </div>
 
-    {% if video_path %}
-    <h3>Processed Video Stream</h3>
-    <img src="{{ url_for('video_feed', video_filename=video_path) }}" width="640" height="480">
-    {% endif %}
+    <!-- Link to the JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
