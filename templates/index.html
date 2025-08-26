@@ -32,13 +32,21 @@
             <!-- Header -->
             <div class="header">
                 <div class="empty-container"></div>
-                <h1>Object Detection</h1>
-                <div class="logo-container"><img src="{{ url_for('static', filename='images/logo.png') }}" width="90" height="30" alt=""></div>
+                <h1>Real Time Object Detection</h1>
+                <div class="logo-container"><img src="{{ url_for('static', filename='') }}" width="90" height="30" alt=""></div>
             </div>
             <!-- Tablet Container -->
-            <div class="tablet-container">
-                <img id="tablet-image" src="{{ url_for('static', filename='images/tablet.png') }}" width="580" height="450" alt="">
-                <canvas id="main-canvas" width="740" height="540"></canvas>
+            <div class="tablets-wrapper">
+                <!-- First Tablet -->
+                <div class="tablet-container">
+                    <img id="tablet-image1" src="{{ url_for('static', filename='images/tablet.png') }}" alt="">
+                    <canvas id="main-canvas1"></canvas>
+                </div>
+                <!-- First Tablet -->
+                <div class="tablet-container">
+                    <img id="tablet-image2" src="{{ url_for('static', filename='images/tablet.png') }}" alt="">
+                    <canvas id="main-canvas2"></canvas>
+                </div>
             </div>
             <!-- Chart Section-->
             <div class="chart-container">

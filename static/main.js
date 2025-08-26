@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Set up first video feed
-    setupCanvas("main-canvas","/video_feed");
+    setupCanvas("main-canvas1","/video_feed");
+    //Set up the second video feed
+    setupCanvas("main-canvas2", "/generate_map")
 
     //Line Chart Setup
     const ctxChart = document.getElementById("line-chart").getContext("2d");

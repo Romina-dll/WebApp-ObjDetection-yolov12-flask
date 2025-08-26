@@ -1,64 +1,62 @@
-/*********Complete Page*******/
-*{
-    margin:0px;
+/********* Complete Page *******/
+
+* {
+    margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: white;
+
+body {
+    background-color: rgb(226, 149, 149);
 }
 
 /* Main Page */
-.main-page{
-    height:100vh;
-    display:flex;
-
+.main-page {
+    height: 100vh;
+    display: flex;
 }
 
 /* Side Line */
-.side-line{
-    background-color: lightslategray;
-    height:100%;
-    width:25px;
+.side-line {
+    background-color: rgb(137, 178, 218);
+    height: 100%;
+    width: 25px;
 }
 
 /* Side Bar */
-.side-bar{
-    background-color: #f7f7f7;
-    height:100%;
-    width: 15%;
-    display:flex;
+.side-bar {
+    background-color: rgb(225, 94, 65);
+    height: 100%;
+    width: 8%;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
-    box-shadow: 1px 1px 10px rgb(185, 185, 185);
+    box-shadow: 1px 1px 10px rgb(225, 94, 65);
 }
+
 /* Circle */
-.circle{
-    background-color: grey;
-    height:75px;
-    width:75px;
+.circle {
+    background-color: rgb(46, 117, 10);
+    height: 75px;
+    width: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius:50%;
-
-
-}
-.circle:hover{
-    background-color: yellow;
+    border-radius: 50%;
 }
 
-.circle:active{
+.circle:hover {
+    background-color: rgb(153, 0, 255);
+}
+
+.circle:active {
     background-color: green;
 }
 
-.blue-circle{
-    background-color: lightskyblue;
-}
 /* Right Panel */
-.right-panel{
+.right-panel {
     height: 100%;
     width: 100%;
     display: flex;
@@ -66,57 +64,89 @@ body{
 }
 
 /* Header */
-.header{
-    background-color: royalblue;
-    height:75px;
+.header {
+    background-color: rgb(225, 94, 65);
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 1px 1px 10px rgb(185, 185, 185);
-
+    padding: 0 20px;
+    flex-shrink: 0;
 }
 
-h1{
+/* Increase Font Size of Header Title */
+h1 {
     font-family: 'Roboto', sans-serif;
-    color:white;
-    font-size: 1.5rem;
-
-}
-.empty-container{
-    padding-left: 70px;
-
+    color: white;
+    font-size: 2rem;
+    margin: 0;
 }
 
-.logo-container{
-    padding-right: 70px;
+/* Adjust Logo and Empty Container for Better Alignment */
+.empty-container {
+    padding-left: 100px;
+}
+
+.logo-container {
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Tablets Wrapper */
+.tablets-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
 }
 
 /* Tablet Container */
-.tablet-container{
-    height: 100%;
+.tablet-container {
+    position: relative;
+    width: 580px;
+    height: 450px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 20px;
 }
-/*Chart Container*/
-.chart-container{
-    width: 50%;
+
+/* Tablet Image */
+#tablet-image1, #tablet-image2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Video Canvas */
+#main-canvas1, #main-canvas2 {
+    width: 530px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+
+/* Chart Container */
+.chart-container {
+    width: 48%;
     height: 150px;
     background: #f0f0f0;
     border-radius: 10px;
     padding: 1px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    margin: 0 auto;
-}
-#tablet-image{
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; /* Centers the container horizontally */
 }
 
-#main-canvas{
-    position: absolute;
-    z-index:-1;
-}
